@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(noAuthenticated)/login/page.tsx", "src/app/(noAuthenticated)/signin/page.jsx", "src/app/(authenticated)/profileInvestment/page.tsx", "src/app/(authenticated)/layout.tsx", "src/app/(noAuthenticated)/page.tsx", "src/app/utils/functions.ts", "src/app/hooks/useSignin.ts", "src/app/hooks/useLogin.ts"],
+  "exclude": ["node_modules"]
+}

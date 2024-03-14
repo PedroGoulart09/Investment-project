@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+.bg-primary {
+    background-color: #22293D;
+}
+
+.btn {
+    background-color: #F34A2E;
+}
+
+.text {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.colorText {
+    color: #5b5e74;
+}
+
+.input-placeholder::placeholder {
+    color:red;
+  }
