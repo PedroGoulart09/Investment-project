@@ -9,7 +9,6 @@ import { scroll } from '@/app/utils/functions';
 export default function AccessInvestiment() {
 
   return (
-
     <section className='bg-primary'>
       <div className="flex flex-wrap justify-around items-center space-y-4">
         <div className="text-white text-center">

@@ -1,0 +1,199 @@
+{
+  "acoes": [
+    {
+      "company_name": "Apple Inc.",
+      "ticker": "AAPL",
+      "current_price": 135.50,
+      "traded_volume": 2000000,
+      "percentage_change": 1.5
+    },
+    {
+      "company_name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "current_price": 245.75,
+      "traded_volume": 1500000,
+      "percentage_change": 0.8
+    },
+    {
+      "company_name": "Amazon.com Inc.",
+      "ticker": "AMZN",
+      "current_price": 3100.25,
+      "traded_volume": 1000000,
+      "percentage_change": -0.2
+    },
+    {
+      "company_name": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "current_price": 2100.00,
+      "traded_volume": 800000,
+      "percentage_change": 1.2
+    },
+    {
+      "company_name": "Facebook, Inc.",
+      "ticker": "FB",
+      "current_price": 300.80,
+      "traded_volume": 1200000,
+      "percentage_change": 0.5
+    }
+  ],
+  "cdb": [
+    {
+      "bank_name": "JP Morgan Chase",
+      "term_days": 365,
+      "interest_rate": 2.75,
+      "minimum_investment": 10000
+    },
+    {
+      "bank_name": "Bank of America",
+      "term_days": 180,
+      "interest_rate": 2.5,
+      "minimum_investment": 5000
+    },
+    {
+      "bank_name": "Wells Fargo",
+      "term_days": 270,
+      "interest_rate": 2.6,
+      "minimum_investment": 8000
+    },
+    {
+      "bank_name": "Citigroup",
+      "term_days": 365,
+      "interest_rate": 2.8,
+      "minimum_investment": 12000
+    },
+    {
+      "bank_name": "Goldman Sachs",
+      "term_days": 180,
+      "interest_rate": 2.4,
+      "minimum_investment": 6000
+    }
+  ],
+  "lci": [
+    {
+      "bank_name": "Santander",
+      "term_days": 360,
+      "interest_rate": 6.0,
+      "minimum_investment": 10000
+    },
+    {
+      "bank_name": "Bradesco",
+      "term_days": 270,
+      "interest_rate": 5.5,
+      "minimum_investment": 8000
+    },
+    {
+      "bank_name": "Itaú",
+      "term_days": 180,
+      "interest_rate": 5.2,
+      "minimum_investment": 6000
+    },
+    {
+      "bank_name": "BBVA",
+      "term_days": 365,
+      "interest_rate": 6.2,
+      "minimum_investment": 12000
+    },
+    {
+      "bank_name": "Banco do Brasil",
+      "term_days": 240,
+      "interest_rate": 5.8,
+      "minimum_investment": 10000
+    }
+  ],
+  "lca": [
+    {
+      "bank_name": "HSBC",
+      "term_days": 360,
+      "interest_rate": 5.5,
+      "minimum_investment": 15000
+    },
+    {
+      "bank_name": "Barclays",
+      "term_days": 270,
+      "interest_rate": 5.2,
+      "minimum_investment": 12000
+    },
+    {
+      "bank_name": "UBS",
+      "term_days": 180,
+      "interest_rate": 5.0,
+      "minimum_investment": 10000
+    },
+    {
+      "bank_name": "Deutsche Bank",
+      "term_days": 365,
+      "interest_rate": 5.8,
+      "minimum_investment": 18000
+    },
+    {
+      "bank_name": "Credit Suisse",
+      "term_days": 240,
+      "interest_rate": 5.3,
+      "minimum_investment": 11000
+    }
+  ],
+  "cra": [
+    {
+      "issuer": "Bradesco",
+      "term_days": 360,
+      "interest_rate": 7.0,
+      "minimum_investment": 20000
+    },
+    {
+      "issuer": "Itaú",
+      "term_days": 270,
+      "interest_rate": 6.5,
+      "minimum_investment": 15000
+    },
+    {
+      "issuer": "Santander",
+      "term_days": 180,
+      "interest_rate": 6.2,
+      "minimum_investment": 12000
+    },
+    {
+      "issuer": "BBVA",
+      "term_days": 365,
+      "interest_rate": 7.5,
+      "minimum_investment": 22000
+    },
+    {
+      "issuer": "Banco do Brasil",
+      "term_days": 240,
+      "interest_rate": 6.8,
+      "minimum_investment": 18000
+    }
+  ],
+  "cri": [
+    {
+      "issuer": "JP Morgan Chase",
+      "term_days": 360,
+      "interest_rate": 7.2,
+      "minimum_investment": 20000
+    },
+    {
+      "issuer": "Bank of America",
+      "term_days": 270,
+      "interest_rate": 6.7,
+      "minimum_investment": 15000
+    },
+    {
+      "issuer": "Wells Fargo",
+      "term_days": 180,
+      "interest_rate": 6.5,
+      "minimum_investment": 12000
+    },
+    {
+      "issuer": "Citigroup",
+      "term_days": 365,
+      "interest_rate": 7.6,
+      "minimum_investment": 22000
+    },
+    {
+      "issuer": "Goldman Sachs",
+      "term_days": 240,
+      "interest_rate": 7.0,
+      "minimum_investment": 18000
+    }
+  ]
+}

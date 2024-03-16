@@ -1,9 +1,10 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from '@/app/components/ui/button';
 import { Label } from '@/app/components/ui/label';
 import { Form, Formik } from 'formik';
 import { CardProfileInvestment } from '@/app/components/dashboard/card';
+import { parseJwt } from '@/app/utils/functions';
 
 export default function ProfileInvestment() {
   const [points, setPoints] = React.useState({
@@ -34,18 +35,6 @@ export default function ProfileInvestment() {
 
   }
 
-
-/* 
-  function parseJwt(token: any) {
-    let base64Url = token.split('.')[1];
-    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    let jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
-      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-
-    return JSON.parse(jsonPayload);
-  }
-
   useEffect(() => {
     const checkToken = () => {
       const token = parseJwt(localStorage.getItem('token'));
@@ -60,7 +49,7 @@ export default function ProfileInvestment() {
     const intervalId = setInterval(checkToken, 1210000);
 
     return () => clearInterval(intervalId);
-  }, []) */
+  }, [])
 
 
   return (
@@ -149,18 +138,18 @@ export default function ProfileInvestment() {
                   <div>
                     <p className='block text-sm font-bold mb-2'>5 - Por conta de oscilações do mercado, considere que seus investimentos <br /> percam 10% do valor aplicado. Neste caso, o que você faria?</p>
                     <div className='mb-2 flex gap-2'>
+                      <input type='radio' id='fifthQuestion1' name="fifthQuestion" onClick={() => setFieldValue('fifthQuestion', 1)} />
+                      <Label htmlFor='fifthQuestion1' className=' text-sm'>Tiraria todo o dinheiro</Label>
+                    </div>
+
+                    <div className='mb-2 flex gap-2'>
                       <input type='radio' id='fifthQuestion2' name="fifthQuestion" onClick={() => setFieldValue('fifthQuestion', 2)} />
-                      <Label htmlFor='fifthQuestion2' className=' text-sm'>Tiraria todo o dinheiro</Label>
+                      <Label htmlFor='fifthQuestion2' className=' text-sm'>Manteria o dinheiro</Label>
                     </div>
 
                     <div className='mb-2 flex gap-2'>
                       <input type='radio' id='fifthQuestion3' name="fifthQuestion" onClick={() => setFieldValue('fifthQuestion', 3)} />
-                      <Label htmlFor='fifthQuestion3' className=' text-sm'>Manteria o dinheiro</Label>
-                    </div>
-
-                    <div className='mb-2 flex gap-2'>
-                      <input type='radio' id='fifthQuestion4' name="fifthQuestion" onClick={() => setFieldValue('fifthQuestion', 4)} />
-                      <Label htmlFor='fifthQuestion4' className=' text-sm'>Colocaria mais dinheiro</Label>
+                      <Label htmlFor='fifthQuestion3' className=' text-sm'>Colocaria mais dinheiro</Label>
                     </div>
 
                   </div>
@@ -178,8 +167,8 @@ export default function ProfileInvestment() {
                     </div>
 
                     <div className='mb-2 flex gap-2'>
-                      <input type='radio' id='sixthQuestion4' name="sixthQuestion" onClick={() => setFieldValue('sixthQuestion', 4)} />
-                      <Label htmlFor='sixthQuestion4' className=' text-sm'>Minha formação está diretamente relacionada ao mercado financeiro</Label>
+                      <input type='radio' id='sixthQuestion3' name="sixthQuestion" onClick={() => setFieldValue('sixthQuestion', 3)} />
+                      <Label htmlFor='sixthQuestion3' className=' text-sm'>Minha formação está diretamente relacionada ao mercado financeiro</Label>
                     </div>
                   </div>
 
