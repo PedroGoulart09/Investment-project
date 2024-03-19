@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(noAuthenticated)/login/page.tsx", "src/app/(noAuthenticated)/signin/page.jsx", "src/app/(authenticated)/profileInvestment/page.tsx", "src/app/(authenticated)/layout.tsx", "src/app/(noAuthenticated)/page.tsx", "src/app/utils/functions.ts", "src/app/hooks/useSignin.ts", "src/app/hooks/useLogin.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(noAuthenticated)/login/page.tsx", "src/app/(noAuthenticated)/signin/page.jsx", "src/app/(authenticated)/profileInvestment/page.tsx", "src/app/(authenticated)/layout.tsx", "src/app/(noAuthenticated)/page.tsx", "src/app/utils/functions.ts", "src/app/hooks/useSignin.ts", "src/app/hooks/useLogin.ts", "src/app/(authenticated)/kindsOfProfile/page.tsx"],
   "exclude": ["node_modules"]
 }

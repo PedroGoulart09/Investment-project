@@ -1,9 +1,8 @@
-import '../globals.css';
+import '../../(noAuthenticated)/globals.css';
 import { ThemeProvider } from '@/app/components/dashboard/theme-provider'
 import { ModeToggle } from '@/app/components/dashboard/darkMode';
-import Footer from '@/app/components/dashboard/footer';
 export const metadata = {
-  title: 'Login',
+  title: 'Perfil de investidor',
 }
 
 export default function RootLayout({ children }: any) {

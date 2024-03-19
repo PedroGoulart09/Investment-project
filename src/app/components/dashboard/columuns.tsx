@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react"
-import { Button } from "../../components/ui/button"
+import { Button } from "../ui/button"
 import { Checkbox } from "@/app/components/ui/checkbox"
 
 export type Payment = {
@@ -56,8 +56,8 @@ export const columns: ColumnDef<Payment>[] = [
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
-      }
-    },
+    }
+  },
   {
     accessorKey: "investimentoMinimo",
     header: () => <div className="text-right">Investimento minimo</div>,
@@ -67,7 +67,7 @@ export const columns: ColumnDef<Payment>[] = [
         style: "currency",
         currency: "BRL",
       }).format(interestRate)
- 
+
       return <div className="text-right font-medium">{formatted}</div>
     },
   },

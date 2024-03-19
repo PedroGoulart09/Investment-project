@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import NavBar from '../components/dashboard/navBar'
 import AccessInvestiment from '../components/dashboard/accessInvestiment'
@@ -8,16 +9,14 @@ import { GlobeDemo } from '../components/dashboard/globeComponent'
 
 
 export default function page() {
- 
   return (
     <>
-        <NavBar />
+       <NavBar />
         <AccessInvestiment />
         <ActivesWorld />
         <GlobeDemo />
         <Signin />
         <Footer />
-       
     </>
   )
 }

@@ -29,7 +29,7 @@ export default function Signin() {
                     }}
                 >
                     {() => (
-                        <Form className="flex justify-center flex-col items-center space-y-6 py-16 w-full sm:max-w-md">
+                        <Form className="flex justify-center flex-col items-center space-y-4 py-16 w-full sm:max-w-md">
                             <div className="flex justify-center text-center">
                                 <Landmark size={40} />
                                 <h1 className="text-3xl sm:text-4xl">PG BANK</h1>
@@ -70,10 +70,10 @@ export default function Signin() {
                             </Label>
                             <Field
                                 type="name"
-                                className="w-full h-12 border-2 rounded"
+                                className="w-full h-12 border-2 rounded pl-3"
                                 id="name"
                                 name="name"
-                                placeholder="Nome"
+                                placeholder="nome"
                             />
                             <ErrorMessage name="name" component="div" className="text-red-500" />
                             <Label htmlFor="name" className="w-full text-start">
@@ -81,7 +81,7 @@ export default function Signin() {
                             </Label>
                             <Field
                                 type="email"
-                                className="w-full h-12 border-2 rounded"
+                                className="w-full h-12 border-2 rounded pl-3"
                                 id="email"
                                 name="email"
                                 placeholder="user@gmail.com"
@@ -92,7 +92,7 @@ export default function Signin() {
                             </Label>
                             <Field
                                 type="password"
-                                className="w-full h-12 border-2 rounded"
+                                className="w-full h-12 border-2 rounded pl-3"
                                 id="password"
                                 name="password"
                                 placeholder="senha"
@@ -107,10 +107,10 @@ export default function Signin() {
                                 Cadastre-se
                             </Button>
 
-                            <div className="flex items-center gap-5 justify-center ">
-                                <hr className="h-10 w-40 max-sm:w-32 max-sm:mt-10" />
-                                <p className="mb-10 max-sm:mt-10">ou</p>
-                                <hr className="h-10 w-40 max-sm:w-32 max-sm:mt-10" />
+                            <div className="flex items-center text-center gap-5 justify-center ">
+                                <hr className="w-40 max-sm:w-32 max-sm:mt-10" />
+                                <p className="max-sm:mt-10">ou</p>
+                                <hr className="w-40 max-sm:w-32 max-sm:mt-10" />
                             </div>
                             <Button
                                 type="button"

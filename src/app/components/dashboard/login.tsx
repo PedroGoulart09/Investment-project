@@ -24,7 +24,7 @@ export default function Login() {
                 validationSchema={SignupSchemaLogin}
                 initialValues={initialValues}
                 onSubmit={(values, actions) => {
-                    handleSubmit(values, actions, setError, useLogin, push,'profileInvestment');
+                    handleSubmit(values, actions, setError, useLogin, push,'kindsOfProfile');
                 }}
             >
                 {() => (
@@ -74,7 +74,7 @@ export default function Login() {
                         </Label>
                         <Field
                             type="email"
-                            className="w-full h-12 border-2 rounded"
+                            className="w-full h-12 border-2 rounded pl-3"
                             id="email"
                             name="email"
                             placeholder="user@gmail.com"
@@ -85,7 +85,7 @@ export default function Login() {
                         </Label>
                         <Field
                             type="password"
-                            className="w-full h-12 border-2 rounded"
+                            className="w-full h-12 border-2 rounded pl-3"
                             id="password"
                             name="password"
                             placeholder="senha"
@@ -98,9 +98,9 @@ export default function Login() {
                             Entrar
                         </Button>
                         <div className="flex items-center gap-5 justify-center ">
-                            <hr className="h-10 w-40 max-sm:w-32 max-sm:mt-10" />
-                            <p className="mb-10 max-sm:mt-10">ou</p>
-                            <hr className="h-10 w-40 max-sm:w-32 max-sm:mt-10" />
+                            <hr className="w-40 max-sm:w-32 max-sm:mt-10" />
+                            <p className="max-sm:mt-10">ou</p>
+                            <hr className="w-40 max-sm:w-32 max-sm:mt-10" />
                         </div>
                         <Button
                             type="button"

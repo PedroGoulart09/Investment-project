@@ -17,7 +17,7 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "../../components/ui/dropdown-menu"
+} from "../ui/dropdown-menu"
 import {
   Table,
   TableBody,
@@ -25,7 +25,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/table"
+} from "../ui/table"
 import React from "react"
 import { Input } from "@/app/components/ui/input"
 import { Button } from "@/app/components/ui/button"
@@ -81,7 +81,7 @@ export function DataTable<TData, TValue>({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto rounded">
-              Columns
+              Colunas
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -144,7 +144,7 @@ export function DataTable<TData, TValue>({
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                 Sem resultado.
+                  Sem resultado.
                 </TableCell>
               </TableRow>
             )}
@@ -153,8 +153,8 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <div className="flex-1 mt-5 text-sm text-slate-600">
-        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
+        {table.getFilteredSelectedRowModel().rows.length} de{" "}
+        {table.getFilteredRowModel().rows.length} linha(s) selecionada.
       </div>
       <div className="flex items-center justify-end space-x-2">
         <Button

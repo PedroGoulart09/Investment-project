@@ -4,10 +4,10 @@ import Image from 'next/image'
 import { Button } from '../ui/button'
 import { Landmark } from 'lucide-react';
 import { scroll } from '@/app/utils/functions';
+import { useInfoInvestment } from '@/app/hooks/useInfoInvestment';
 
 
 export default function AccessInvestiment() {
-
   return (
     <section className='bg-primary'>
       <div className="flex flex-wrap justify-around items-center space-y-4">

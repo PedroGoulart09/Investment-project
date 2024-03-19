@@ -1,12 +1,13 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Button } from '@/app/components/ui/button';
 import { Label } from '@/app/components/ui/label';
 import { Form, Formik } from 'formik';
 import { CardProfileInvestment } from '@/app/components/dashboard/card';
-import { parseJwt } from '@/app/utils/functions';
+import { useAuthenticateToken } from '@/app/hooks/useAuthenticateToken';
 
 export default function ProfileInvestment() {
+  useAuthenticateToken();
   const [points, setPoints] = React.useState({
     firstQuestion: 0,
     secondQuestion: 0,
@@ -35,21 +36,6 @@ export default function ProfileInvestment() {
 
   }
 
-  useEffect(() => {
-    const checkToken = () => {
-      const token = parseJwt(localStorage.getItem('token'));
-
-      const currentTime = Math.floor(Date.now() / 1000);
-      if (token.exp < currentTime) {
-        window.location.href = '/login';
-      }
-    };
-
-    checkToken();
-    const intervalId = setInterval(checkToken, 1210000);
-
-    return () => clearInterval(intervalId);
-  }, [])
 
 
   return (

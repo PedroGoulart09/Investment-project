@@ -1,13 +1,14 @@
 'use client'
 import { useSearchParams } from "next/navigation"
-import { Payment, columns } from "./columuns"
-import { DataTable } from "./data-table"
+import { Payment, columns } from "../../components/dashboard/columuns"
+import { DataTable } from "../../components/dashboard/data-table"
 import { useEffect } from "react";
 import { parseJwt } from "@/app/utils/functions";
+import { useAuthenticateToken } from "@/app/hooks/useAuthenticateToken";
 
- function getData(): Payment[] {
+function getData(): Payment[] {
   const url = useSearchParams();
-  if (url.get('profile') === 'Conservador' || 'Moderado') {
+  if (url.get('profile') === 'Conservador' || url.get('profile') === 'Moderado') {
     return [
       {
 
@@ -202,21 +203,7 @@ import { parseJwt } from "@/app/utils/functions";
 
 export default function DemoPage() {
   const data = getData()
-  useEffect(() => {
-    const checkToken = () => {
-      const token = parseJwt(localStorage.getItem('token'));
-
-      const currentTime = Math.floor(Date.now() / 1000);
-      if (token.exp < currentTime) {
-        window.location.href = '/login';
-      }
-    };
-
-    checkToken();
-    const intervalId = setInterval(checkToken, 1210000);
-
-    return () => clearInterval(intervalId);
-  }, [])
+  useAuthenticateToken();
 
   return (
     <div className="container mx-auto py-10">
