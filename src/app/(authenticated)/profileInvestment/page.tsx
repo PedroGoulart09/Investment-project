@@ -7,7 +7,7 @@ import { CardProfileInvestment } from '@/app/components/dashboard/card';
 import { useAuthenticateToken } from '@/app/hooks/useAuthenticateToken';
 
 export default function ProfileInvestment() {
-  useAuthenticateToken();
+  /* useAuthenticateToken(); */
   const [points, setPoints] = React.useState({
     firstQuestion: 0,
     secondQuestion: 0,

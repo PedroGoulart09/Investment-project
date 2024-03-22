@@ -46,9 +46,9 @@ export default function page() {
     <section>
       <LampDemo />
       <div className="h-[50rem] md:h-[50rem] [perspective:1000px] flex flex-col max-w-7xl mx-auto w-full items-start justify-start my-40">
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center">
           <Tabs tabs={tabs} />
-          <Button className="flex justify-center items-center rounded-2xl border-2 bg-black h-14 text-white" type="button" variant={'outline'} onClick={() => push('/profileInvestment')}>Fazer análise do meu perfil de investidor</Button>
+          <Button className="flex justify-center items-center rounded-2xl border-2 bg-black h-14 text-white mt-4 sm:mt-0" type="button" variant={'outline'} onClick={() => push('/profileInvestment')}>Fazer análise do meu perfil de investidor</Button>
         </div>
       </div>
     </section>

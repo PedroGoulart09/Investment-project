@@ -6,11 +6,15 @@ import { Button } from "../ui/button"
 import { Checkbox } from "@/app/components/ui/checkbox"
 
 export type Payment = {
-  id: string
-  Duração: number
-  Juros: number
-  investimentoMinimo: number
-  Banco: string
+  companyid: number
+  Empresa: string
+  'Liquidez Recorrente': number
+  'Liquidez Média Diária': number
+  'Margem Bruta': number
+  'Margem Líquida': number
+  'Ativo': string
+  'Área de Investimento': string
+  'Valor de Mercado': number
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -37,38 +41,91 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "Duração",
-    header: "Duração",
-  },
-  {
-    accessorKey: "Juros",
-    header: "Juros",
-  },
-  {
-    accessorKey: "Banco",
+    accessorKey: "Empresa",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Banco
+          Empresa
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     }
   },
   {
-    accessorKey: "investimentoMinimo",
-    header: () => <div className="text-right">Investimento minimo</div>,
+    accessorKey: 'Liquidez Recorrente',
+    header: () => <div>Liquidez Recorrente</div>,
     cell: ({ row }) => {
-      const interestRate = parseFloat(row.getValue("investimentoMinimo"))
+      let interestRate = parseFloat(row.getValue('Liquidez Recorrente'))
+      if (isNaN(interestRate)) {
+        interestRate = 0;
+      }
       const formatted = new Intl.NumberFormat("pt-br", {
         style: "currency",
         currency: "BRL",
       }).format(interestRate)
 
-      return <div className="text-right font-medium">{formatted}</div>
+      return <div>{formatted}</div>
     },
   },
+  {
+    accessorKey: 'Margem Bruta',
+    header: () => <div>Margem Bruta</div>,
+    cell: ({ row }) => {
+      let interestRate = parseFloat(row.getValue('Margem Bruta'))
+      if (isNaN(interestRate)) {
+        interestRate = 0;
+      }
+      const formatted = new Intl.NumberFormat("pt-br", {
+        style: "currency",
+        currency: "BRL",
+      }).format(interestRate)
+
+      return <div>{formatted}</div>
+    },
+  },
+  {
+    accessorKey: 'Margem Líquida',
+    header: () => <div>Margem Liquida</div>,
+    cell: ({ row }) => {
+      let interestRate = parseFloat(row.getValue('Margem Líquida'))
+      if (isNaN(interestRate)) {
+        interestRate = 0;
+      }
+      const formatted = new Intl.NumberFormat("pt-br", {
+        style: "currency",
+        currency: "BRL",
+      }).format(interestRate)
+  
+      return <div>{formatted}</div>
+    },
+  },
+  {
+    accessorKey: 'Valor de Mercado',
+    header: () => <div>Valor de Mercado</div>,
+    cell: ({ row }) => {
+      const interestRate = parseFloat(row.getValue('Valor de Mercado'))
+      const formatted = new Intl.NumberFormat("pt-br", {
+        style: "currency",
+        currency: "BRL",
+      }).format(interestRate)
+
+      return <div>{formatted}</div>
+    },
+  },
+  {
+    accessorKey: 'Liquidez Média Diária',
+    header: 'Liquidez Média Diária'
+  },
+  {
+    accessorKey: 'Ativo',
+    header: 'Ativo'
+  },
+  {
+    accessorKey: 'Área de Investimento',
+    header: 'Área de Investimento'
+  },
+
 ]
