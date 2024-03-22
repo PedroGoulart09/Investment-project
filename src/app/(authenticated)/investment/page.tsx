@@ -4,6 +4,8 @@ import { Payment, columns } from "../../components/dashboard/columuns"
 import { DataTable } from "../../components/dashboard/data-table"
 import { useAuthenticateToken } from "@/app/hooks/useAuthenticateToken";
 import { useInfoInvestment } from "@/app/hooks/useInfoInvestment";
+import Graphic from "@/app/components/dashboard/graphic";
+import Footer from "@/app/components/dashboard/footer";
 
 interface InvestmentInfo {
   companyid: number;
@@ -17,43 +19,50 @@ interface InvestmentInfo {
   valormercado: number;
 }
 
-function getData(url: any, infoInvestment: any): Payment[] {
-  return infoInvestment.map(({ 
-    companyid, 
-    companyname, 
-    liquidezcorrente, 
-    liquidezmediadiaria, 
+function getData(infoInvestment: any): Payment[] {
+  return infoInvestment.map(({
+    companyid,
+    companyname,
+    liquidezcorrente,
+    liquidezmediadiaria,
     margembruta,
-    margemliquida, 
-    ticker,subsectorname, 
+    margemliquida,
+    ticker, subsectorname,
     valormercado }: InvestmentInfo) => {
-      return {
-          companyid,
-          Empresa: companyname,
-          'Liquidez Recorrente': liquidezcorrente,
-          'Liquidez Média Diária': liquidezmediadiaria,
-          'Margem Bruta': margembruta,
-          'Margem Líquida': margemliquida,
-          'Ativo': ticker,
-          'Área de Investimento': subsectorname,
-          'Valor de Mercado': valormercado
-      };
+    return {
+      companyid,
+      Empresa: companyname,
+      'Liquidez Recorrente': liquidezcorrente,
+      'Liquidez Média Diária': liquidezmediadiaria,
+      'Margem Bruta': margembruta,
+      'Margem Líquida': margemliquida,
+      'Ativo': ticker,
+      'Área de Investimento': subsectorname,
+      'Valor de Mercado': valormercado
+    };
   });
 }
 
 
 export default function DemoPage() {
   const url = useSearchParams();
-  const {infoInvestment} = useInfoInvestment();
-  const data = getData(url, infoInvestment);
-  console.log(infoInvestment);
-  
-  /* useAuthenticateToken(); */
+  const { infoInvestment } = useInfoInvestment();
+  const data = getData(infoInvestment);
+
+  useAuthenticateToken();
 
   return (
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
-    </div>
+    <>
+      <div className="container mx-auto py-10">
+      <p className="w-full text-center text-2xl mb-5">Perfil do Investidor:  <strong>{url.get('profile')}</strong></p>
+        <DataTable columns={columns} data={data} />
+      </div>
+      <div className="py-10">
+      <Graphic />
+      </div>
+      <Footer />
+      
+    </>
   )
 }
 

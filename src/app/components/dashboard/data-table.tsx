@@ -69,7 +69,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center py-4">
+      <div className="flex items-center py-4 gap-5">
         <Input
           placeholder="Pesquise pela empresa mais desejada..."
           value={(table.getColumn("Empresa")?.getFilterValue() as string) ?? ""}
@@ -94,7 +94,7 @@ export function DataTable<TData, TValue>({
                 return (
                   <DropdownMenuCheckboxItem
                     key={column.id}
-                    className="capitalize"
+                    className="capitalize bg-white"
                     checked={column.getIsVisible()}
                     onCheckedChange={(value) =>
                       column.toggleVisibility(!!value)
@@ -173,7 +173,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          Proximo
+          Próximo
         </Button>
       </div>
     </div>

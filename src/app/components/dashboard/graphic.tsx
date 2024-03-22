@@ -7,7 +7,7 @@ export default class Graphic extends PureComponent {
     render() {
         return (
             <div className='flex justify-center'>
-                <ResponsiveContainer width={'70%'} height={300}>
+                <ResponsiveContainer width={'80%'} height={300}>
                     <LineChart
                         data={data}
                         margin={{

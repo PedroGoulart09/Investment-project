@@ -8,7 +8,7 @@ import { useAuthenticateToken } from "@/app/hooks/useAuthenticateToken";
 
 export default function page() {
   const { push } = useRouter();
-  /* useAuthenticateToken(); */
+  useAuthenticateToken();
   const tabs = [
     {
       title: "Conservador",
