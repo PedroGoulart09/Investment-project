@@ -24,7 +24,7 @@ export default function Login() {
                 validationSchema={SignupSchemaLogin}
                 initialValues={initialValues}
                 onSubmit={(values, actions) => {
-                    handleSubmit(values, actions, setError, useLogin, push,'kindsOfProfile');
+                    handleSubmit(values, actions, setError, push,'kindsOfProfile');
                 }}
             >
                 {() => (

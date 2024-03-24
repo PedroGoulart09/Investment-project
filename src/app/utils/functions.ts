@@ -27,13 +27,12 @@ export function parseJwt(token: any) {
     return JSON.parse(jsonPayload);
   }
 
-export const handleSubmit = async (values: MyFormValues, actions: any, setError: any, register: any, push: any, path: string) => {
+export const handleSubmit = (values: MyFormValues, actions: any, setError: any, push: any, path: string) => {
     try {
         if (!validateEmail(values.email) || values.password.length === 0) {
             setError(ErrorType.InvalidEmail);
             return;
         }
-        await register(values.email, values.password);
         push(`/${path}`)
         setError(ErrorType.None);
 

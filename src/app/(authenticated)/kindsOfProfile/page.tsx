@@ -4,11 +4,9 @@ import { Tabs } from "@/app/components/ui/tabs";
 import InfoProfile from "../../components/dashboard/infoProfile";
 import { Button } from "@/app/components/ui/button";
 import { useRouter } from 'next/navigation';
-import { useAuthenticateToken } from "@/app/hooks/useAuthenticateToken";
 
 export default function page() {
   const { push } = useRouter();
-  useAuthenticateToken();
   const tabs = [
     {
       title: "Conservador",

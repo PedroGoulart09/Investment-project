@@ -4,10 +4,8 @@ import { Button } from '@/app/components/ui/button';
 import { Label } from '@/app/components/ui/label';
 import { Form, Formik } from 'formik';
 import { CardProfileInvestment } from '@/app/components/dashboard/card';
-import { useAuthenticateToken } from '@/app/hooks/useAuthenticateToken';
 
 export default function ProfileInvestment() {
-  useAuthenticateToken();
   const [points, setPoints] = React.useState({
     firstQuestion: 0,
     secondQuestion: 0,

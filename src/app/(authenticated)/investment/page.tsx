@@ -2,7 +2,6 @@
 import { useSearchParams } from "next/navigation"
 import { Payment, columns } from "../../components/dashboard/columuns"
 import { DataTable } from "../../components/dashboard/data-table"
-import { useAuthenticateToken } from "@/app/hooks/useAuthenticateToken";
 import { useInfoInvestment } from "@/app/hooks/useInfoInvestment";
 import Graphic from "@/app/components/dashboard/graphic";
 import Footer from "@/app/components/dashboard/footer";
@@ -48,9 +47,6 @@ export default function DemoPage() {
   const url = useSearchParams();
   const { infoInvestment } = useInfoInvestment();
   const data = getData(infoInvestment);
-
-  useAuthenticateToken();
-
   return (
     <>
       <div className="container mx-auto py-10">
