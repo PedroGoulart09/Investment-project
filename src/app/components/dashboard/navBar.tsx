@@ -73,7 +73,7 @@ export default function NavBar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <Button variant={"link"} onClick={() => push('/learning')}>Explore o mundo dos investimentos</Button>
+          <Button variant={"link"} onClick={() => push('/learning')}><p className="text font-bold">Explore o mundo dos investimentos</p></Button>
           <Support />
         </NavigationMenuList>
 
