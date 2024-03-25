@@ -32,6 +32,7 @@ PG INVEST utilizes a robust technology stack for its development and deployment:
 
 PG INVEST is live and ready for you to explore! Visit the live version at [https://pg-invest.vercel.app/](https://pg-invest.vercel.app/) and start your investment journey today!
 
+Backend Project: https://github.com/PedroGoulart09/Investment-project-backend
 
 🚀 Installation
 To get started with PG INVEST, simply follow these steps:
